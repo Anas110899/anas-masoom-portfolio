@@ -34,6 +34,7 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   background-attachment: fixed;
+  padding-top: 0;
 }
 
 /* ── NAV ─────────────────────────────────────── */
@@ -45,6 +46,7 @@ nav {
   background: rgba(26,26,26,0.95);
   backdrop-filter: blur(14px);
   border-bottom: 2px solid var(--teal);
+  min-height: 70px;
 }
 .nav-logo {
   font-family: 'JetBrains Mono', monospace;
@@ -65,8 +67,9 @@ nav {
 .hero {
   min-height: 100vh;
   display: flex; align-items: center;
-  padding: 120px 60px 80px;
+  padding: 140px 60px 80px;
   position: relative; overflow: hidden;
+  margin-top: 20px;
 }
 .hero::before {
   content: '';
@@ -181,7 +184,10 @@ nav {
 .stat-label { font-size: 12px; color: var(--grey); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; }
 
 /* ── SECTIONS ──────────────────────────────────── */
-section { padding: 100px 60px; }
+section { 
+  padding: 100px 60px;
+  scroll-margin-top: 80px;
+}
 .section-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; color: var(--teal);
@@ -442,6 +448,7 @@ footer p { font-size: 12.5px; color: var(--grey2); }
   nav { padding: 16px 24px; }
   .nav-links { gap: 20px; }
   .hero, section { padding-left: 24px; padding-right: 24px; }
+  .hero { padding-top: 140px; margin-top: 20px; }
   .stats-bar { padding: 28px 24px; gap: 32px; flex-wrap: wrap; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   footer { flex-direction: column; gap: 8px; padding: 20px 24px; text-align: center; }
@@ -452,11 +459,17 @@ footer p { font-size: 12.5px; color: var(--grey2); }
   .nav-logo { font-size: 12px; }
   .nav-links { gap: 10px; }
   .nav-links a { font-size: 11px; }
+  .hero { padding-top: 120px; margin-top: 30px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 48px); }
+  .hero-sub { font-size: 14px; }
+  .hero-expertise { padding: 20px 24px; }
 }
 
 @media (max-width: 460px) {
   .nav-links { gap: 8px; }
   .nav-links a { font-size: 10px; }
+  section { padding: 80px 16px; scroll-margin-top: 70px; }
+  .hero { padding: 100px 16px 80px; }
 }
 
 /* ── INDUSTRIAL ENHANCEMENTS ────────────────────── */
@@ -503,12 +516,12 @@ footer p { font-size: 12.5px; color: var(--grey2); }
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="hero-eyebrow">🏭 Operations Manager · Manufacturing Excellence</div>
+    <div class="hero-eyebrow">🏭 Operations Manager · 3+ Years Manufacturing Excellence</div>
     <h1>Optimizing <span>factory operations</span><br>maximizing production<br>efficiency.</h1>
     <p class="hero-sub">I drive manufacturing excellence through end-to-end operations management, inventory optimization, supply chain mastery, and lean team leadership — delivering zero downtime, cost reduction, and scalable processes across cement and packaging industries.</p>
     <div class="hero-expertise">
       <h3 class="expertise-title">Expert in Manufacturing Operations</h3>
-      <p class="expertise-text"><strong>Master's in Project Management</strong> with 2+ years of hands-on experience leading warehouse operations, inventory control, and supply chain coordination. Specialized in <strong>SAP ERP systems, cost optimization, and team leadership</strong> across cement and packaging manufacturing industries. Ready to drive operational excellence and measurable business impact.</p>
+      <p class="expertise-text"><strong>Master's in Project Management</strong> with 3+ years of hands-on experience leading warehouse operations, inventory control, and supply chain coordination. Specialized in <strong>SAP ERP systems, cost optimization, and team leadership</strong> across cement and packaging manufacturing industries. Ready to drive operational excellence and measurable business impact.</p>
     </div>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Achievements ↓</a>
@@ -520,7 +533,7 @@ footer p { font-size: 12.5px; color: var(--grey2); }
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat">
-    <div class="stat-num">2+</div>
+    <div class="stat-num">3+</div>
     <div class="stat-label">Years Experience</div>
   </div>
   <div class="stat">
@@ -543,7 +556,7 @@ footer p { font-size: 12.5px; color: var(--grey2); }
   <h2 class="section-title">About Me</h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>I'm an <strong>Operations & Supply Chain Manager</strong> based in Wah, Pakistan, with a Master's in Project Management from SZABIST. I specialize in <strong>inventory optimization, procurement coordination, and operational excellence</strong> across manufacturing and cement industries.</p>
+      <p>I'm an <strong>Operations & Supply Chain Manager</strong> based in Wah, Pakistan, with a Master's in Project Management from SZABIST and 3+ years of hands-on experience. I specialize in <strong>inventory optimization, procurement coordination, and operational excellence</strong> across manufacturing and cement industries.</p>
       <p>Currently serving as <strong>Head of Store at Bestway Packaging Limited</strong>, I manage all aspects of warehouse operations — from inventory control and stock forecasting to vendor coordination and process optimization. I've reduced excess inventory by 25%, improved space utilization through smart storage systems, and maintained 100% material supply uptime across production facilities.</p>
       <p>My approach combines data-driven decision-making with hands-on leadership. I architect inventory systems that scale, implement automation in routine tasks, and mentor store teams to deliver measurable business impact.</p>
       <div class="about-tags">
